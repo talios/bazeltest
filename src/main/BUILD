@@ -1,3 +1,7 @@
+java_plugin(name="dagger_compiler_plugin",
+  deps = ["@dagger_compiler//jar", "@guava//jar"],
+  processor_class = "dagger.internal.codegen.ComponentProcessor")
+
 
 java_library(
     name = "bazeltest_api",
@@ -7,18 +11,17 @@ java_library(
 java_library(
     name = "bazeltest_impl",
     srcs = glob(["java/com/talios/bazeltest/impl/**/*.java"]),
-    deps = [
+    plugins = [":dagger_compiler_plugin"],
+	  runtime_deps = [
       ":bazeltest_api",
       "@javaslang//jar",
-      "@javapoet//jar"
-    ],
-	  runtime_deps = [
+      "@javapoet//jar",
+      "@guava//jar",
       "@dagger//jar",
       "@dagger_compiler//jar",
       "@javax_inject//jar"
 	]
 )
-
 
 java_binary(
     name = "bazeltest",
@@ -33,3 +36,4 @@ java_binary(
     ],
     main_class = "com.talios.bazeltest.Main",
 )
+
