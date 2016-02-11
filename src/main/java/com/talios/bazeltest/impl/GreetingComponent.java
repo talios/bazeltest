@@ -7,7 +7,7 @@ import javax.inject.Singleton;
 
 @Singleton
 @Component(modules = GreetingModule.class )
-public class GreetingComponent {
+public interface GreetingComponent {
 
   Greeter provideGreeter();
 

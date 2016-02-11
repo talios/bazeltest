@@ -1,22 +1,24 @@
 package com.talios.bazeltest;
 
-//import javaslang.collection.List;
-//import javaslang.control.Try;
+import com.talios.bazeltest.impl.GreetingComponent;
+import com.talios.bazeltest.impl.DaggerGreetingComponent;
+import javaslang.collection.List;
+import javaslang.control.Try;
 
 public class Main {
   
   public static void main(String[] args) {
     
-//    Try<List<String>> vals = Try.of(() -> List.of(new String[] {"one", "two", "three"}));
+    Try<List<String>> vals = Try.of(() -> List.of(new String[] {"one", "two", "three"}));
 
-//    vals.forEach(vargs -> System.out.println(vargs.get(1)));
+    vals.forEach(vargs -> System.out.println(vargs.get(1)));
 
     System.out.println("Hello world.");
     
     
-//    GreetingComponent greeting = DaggerGreetingComponent.create();
+    GreetingComponent greeting = DaggerGreetingComponent.create();
     
-//    System.out.println(greeting.provideGreeter().greet("Mark"));
+    System.out.println(greeting.provideGreeter().greet("Mark"));
         
 
     // code-gen
