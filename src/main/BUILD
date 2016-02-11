@@ -29,9 +29,7 @@ java_binary(
       "@javapoet//jar"
     ],
     runtime_deps = [
-      "@dagger//jar",
-      "@guava//jar",
+      "@dagger//jar"
     ],
     main_class = "com.talios.bazeltest.Main",
 )
-
