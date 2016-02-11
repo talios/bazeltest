@@ -11,23 +11,21 @@ import javaslang.control.Try;
 import javax.lang.model.element.Modifier;
 
 public class Main {
-  
+
   public static void main(String[] args) {
-    
+
     Try<List<String>> vals = Try.of(() -> List.of(new String[] {"one", "two", "three"}));
 
     vals.forEach(vargs -> System.out.println(vargs.get(1)));
 
     System.out.println("Hello world.");
-    
-    
+
     GreetingComponent greeting = DaggerGreetingComponent.create();
-    
+
     System.out.println(greeting.provideGreeter().greet("Mark"));
-        
 
     // code-gen
-    
+
     MethodSpec main = MethodSpec.methodBuilder("main")
                                 .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                                 .returns(void.class)
@@ -51,7 +49,6 @@ public class Main {
     });
 
 
+  }
 
-  }  
-  
 }

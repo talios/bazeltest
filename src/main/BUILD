@@ -16,12 +16,7 @@ java_library(
       ":bazeltest_api",
       "@dagger//jar",
       "@javax_inject//jar"
-    ],
-	  runtime_deps = [
-      "@javaslang//jar",
-      "@javapoet//jar",
-      "@guava//jar"
-	]
+    ]
 )
 
 java_binary(
