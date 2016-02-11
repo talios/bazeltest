@@ -1,13 +1,19 @@
-java_plugin(name="dagger_compiler_plugin",
+java_plugin(
+  name="dagger_compiler_plugin",
   deps = ["@dagger//jar", "@dagger_compiler//jar", "@dagger_producers//jar", "@javax_inject//jar", "@guava//jar"],
   processor_class = "dagger.internal.codegen.ComponentProcessor")
 
+java_plugin(
+  name="derive4j_plugin",
+  deps = ["@derive4j//jar", "@derive4j_annotation//jar", "@derive4j_processor_api//jar", "@javapoet//jar"],
+  processor_class = "org.derive4j.processor.DerivingProcessor")
 
 java_library(
     name = "bazeltest_api",
     srcs = glob(["java/com/talios/bazeltest/api/**/*.java"]),
-	visibility = ["//visibility:public"]
-)
+    plugins = [":derive4j_plugin"],
+    deps = ["@derive4j_annotation//jar", "@javaslang//jar"],
+    visibility = ["//visibility:public"])
 
 java_library(
     name = "bazeltest_impl",
@@ -18,8 +24,7 @@ java_library(
       "@dagger//jar",
       "@javax_inject//jar"
     ],
-	visibility = ["//visibility:public"]
-)
+	visibility = ["//visibility:public"])
 
 java_binary(
     name = "bazeltest",
@@ -33,5 +38,4 @@ java_binary(
     runtime_deps = [
       "@dagger//jar"
     ],
-    main_class = "com.talios.bazeltest.Main",
-)
+    main_class = "com.talios.bazeltest.Main")

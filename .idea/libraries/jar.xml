@@ -7,6 +7,9 @@
       <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/javapoet/jar/javapoet-1.0.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/javaslang/jar/javaslang-1.2.0.jar!/" />
       <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/javax_inject/jar/javax.inject-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/derive4j/jar/derive4j-0.6.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/derive4j_annotation/jar/derive4j-annotation-0.6.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/derive4j_processor_api/jar/derive4j-processor-api-0.6.3.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

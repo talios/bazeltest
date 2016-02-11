@@ -6,7 +6,7 @@ java_test(
   	  "@junit//jar",
 	  "@hamcrest//jar"
 	],
-    runtime_deps = [
-        "//src/main:bazeltest_impl",
-    ],
+#    runtime_deps = [
+#        "//src/main:bazeltest_impl",
+#    ],
 )
