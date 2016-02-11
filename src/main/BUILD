@@ -5,7 +5,8 @@ java_plugin(name="dagger_compiler_plugin",
 
 java_library(
     name = "bazeltest_api",
-    srcs = glob(["java/com/talios/bazeltest/api/**/*.java"])
+    srcs = glob(["java/com/talios/bazeltest/api/**/*.java"]),
+	visibility = ["//visibility:public"]
 )
 
 java_library(
@@ -16,7 +17,8 @@ java_library(
       ":bazeltest_api",
       "@dagger//jar",
       "@javax_inject//jar"
-    ]
+    ],
+	visibility = ["//visibility:public"]
 )
 
 java_binary(
