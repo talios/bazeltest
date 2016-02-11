@@ -1,8 +1,8 @@
 package com.talios.bazeltest.impl;
 
 import com.talios.bazeltest.api.Greeter;
-
-import javax.inject.Inject;
+import dagger.Module;
+import dagger.Provides;
 
 @Module
 public class GreetingModule {
