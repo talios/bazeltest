@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/dagger/jar/dagger-2.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/dagger_compiler/jar/dagger-compiler-2.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/guava/jar/guava-19.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/javapoet/jar/javapoet-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/javaslang/jar/javaslang-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazeltest/external/javax_inject/jar/javax.inject-1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
