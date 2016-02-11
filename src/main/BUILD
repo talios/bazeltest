@@ -30,12 +30,12 @@ java_binary(
     deps = [
       ":bazeltest_api",
       ":bazeltest_impl",
-      "@javaslang//jar"
+      "@javaslang//jar",
+      "@javapoet//jar"
     ],
     runtime_deps = [
       "@dagger//jar",
       "@guava//jar",
-      "@javapoet//jar"
     ],
     main_class = "com.talios.bazeltest.Main",
 )

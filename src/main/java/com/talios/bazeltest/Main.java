@@ -1,9 +1,14 @@
 package com.talios.bazeltest;
 
-import com.talios.bazeltest.impl.GreetingComponent;
+import com.squareup.javapoet.JavaFile;
+import com.squareup.javapoet.MethodSpec;
+import com.squareup.javapoet.TypeSpec;
 import com.talios.bazeltest.impl.DaggerGreetingComponent;
+import com.talios.bazeltest.impl.GreetingComponent;
 import javaslang.collection.List;
 import javaslang.control.Try;
+
+import javax.lang.model.element.Modifier;
 
 public class Main {
   
@@ -23,28 +28,28 @@ public class Main {
 
     // code-gen
     
-//    MethodSpec main = MethodSpec.methodBuilder("main")
-//        .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
-//        .returns(void.class)
-//        .addParameter(String[].class, "args")
-//        .addJavadoc("// hello - generated at $L", new java.util.Date().toString())
-//        .addStatement("$T.out.println($S)", System.class, "Hello, JavaPoet!")
-//        .build();
-//
-//    TypeSpec helloWorld = TypeSpec.classBuilder("HelloWorld")
-//        .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
-//        .addMethod(main)
-//        .build();
-//
-//    JavaFile javaFile = JavaFile.builder("com.example.helloworld", helloWorld)
-//        .build();
-//
-//
-//    Try.of(() -> {
-//      javaFile.writeTo(System.out);
-//      return null;
-//    });
-//
+    MethodSpec main = MethodSpec.methodBuilder("main")
+                                .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
+                                .returns(void.class)
+                                .addParameter(String[].class, "args")
+                                .addJavadoc("hello - generated at $L", new java.util.Date().toString())
+                                .addStatement("$T.out.println($S)", System.class, "Hello, JavaPoet!")
+                                .build();
+
+    TypeSpec helloWorld = TypeSpec.classBuilder("HelloWorld")
+                                  .addModifiers(Modifier.PUBLIC, Modifier.FINAL)
+                                  .addMethod(main)
+                                  .build();
+
+    JavaFile javaFile = JavaFile.builder("com.example.helloworld", helloWorld)
+                                .build();
+
+
+    Try.of(() -> {
+      javaFile.writeTo(System.out);
+      return null;
+    });
+
 
 
   }  
