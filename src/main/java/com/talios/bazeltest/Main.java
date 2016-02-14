@@ -3,8 +3,9 @@ package com.talios.bazeltest;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
-import com.talios.bazeltest.impl.DaggerGreetingComponent;
+import com.talios.bazeltest.api.Greetings;
 import com.talios.bazeltest.impl.GreetingComponent;
+import com.talios.bazeltest.impl.DaggerGreetingComponent;
 import javaslang.collection.List;
 import javaslang.control.Try;
 
@@ -22,7 +23,7 @@ public class Main {
 
     GreetingComponent greeting = DaggerGreetingComponent.create();
 
-    System.out.println(greeting.provideGreeter().greet("Mark"));
+    System.out.println(greeting.provideGreeter().greet(Greetings.ProfessionalGreeting("Mark")));
 
     // code-gen
 
@@ -42,12 +43,10 @@ public class Main {
     JavaFile javaFile = JavaFile.builder("com.example.helloworld", helloWorld)
                                 .build();
 
-
     Try.of(() -> {
       javaFile.writeTo(System.out);
       return null;
     });
-
 
   }
 
