@@ -23,7 +23,7 @@ public class Main {
 
     GreetingComponent greeting = DaggerGreetingComponent.create();
 
-    System.out.println(greeting.provideGreeter().greet(Greetings.ProfessionalGreeting("Mark")));
+    System.out.println(greeting.provideGreeter().greet(Greetings.Military("Mark", "Soldier")));
 
     // code-gen
 

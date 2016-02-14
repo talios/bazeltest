@@ -10,8 +10,9 @@ public abstract class Greeting {
 
   public interface Cases<R> {
 
-    R SimpleGreeting(String name);
-    R ProfessionalGreeting(String name);
+    R Casual(String name);
+    R Professional(String name);
+    R Military(String name, String rank);
 
   }
 

@@ -10,9 +10,10 @@ import java.util.function.Function;
 @Module
 public class GreetingModule {
 
-  static final Function<Greeting, String> greetingMessagFn = Greetings.cases()
-    .SimpleGreeting(person -> String.format("Hello %s",  person))
-    .ProfessionalGreeting(person -> String.format("Good evening Sir %s, how are you?", person));
+  private static final Function<Greeting, String> greetingMessagFn = Greetings.cases()
+    .Casual(person -> String.format("Hello %s",  person))
+    .Professional(person -> String.format("Good evening Sir %s, how are you?", person))
+    .Military((name, rank) -> String.format("Stand to Attention %s...  at ease.", rank));
 
   @Provides
   Greeter provideGreeter() {
