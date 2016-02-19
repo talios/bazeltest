@@ -5,7 +5,7 @@ import org.derive4j.Derive;
 import org.derive4j.Flavour;
 import org.derive4j.Visibility;
 
-@Data(value = @Derive(withVisibility = Visibility.Same), flavour = Flavour.Javaslang)
+@Data(value = @Derive(make = {}), flavour = Flavour.Javaslang)
 public abstract class Greeting {
 
   public interface Cases<R> {

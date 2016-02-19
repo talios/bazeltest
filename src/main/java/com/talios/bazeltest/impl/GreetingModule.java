@@ -19,7 +19,10 @@ public class GreetingModule {
   Greeter provideGreeter() {
     return new Greeter() {
       @Override
-      public String greet(Greeting greeting) {                  
+      public String greet(Greeting greeting) {
+          
+        System.out.println("Found greeting for: " + Greetings.getName(greeting));
+                            
         return greetingMessagFn.apply(greeting);
       }
     };
