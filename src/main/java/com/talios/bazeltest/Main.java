@@ -31,7 +31,7 @@ public class Main {
                                 .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
                                 .returns(void.class)
                                 .addParameter(String[].class, "args")
-                                .addJavadoc("hello - generated at $L", new java.util.Date().toString())
+                                .addJavadoc("hello - generated at $L\n", new java.util.Date().toString())
                                 .addStatement("$T.out.println($S)", System.class, "Hello, JavaPoet!")
                                 .build();
 

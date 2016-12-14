@@ -1,0 +1,5 @@
+directories:
+  src/main/java
+
+targets:
+  //src/main:bazeltest
