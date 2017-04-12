@@ -1,10 +1,12 @@
 java_plugin(
   name="dagger_compiler_plugin",
+  generates_api=True,
   deps = ["@dagger//jar", "@dagger_compiler//jar", "@dagger_producers//jar", "@javax_inject//jar", "@guava//jar"],
   processor_class = "dagger.internal.codegen.ComponentProcessor")
 
 java_plugin(
   name="derive4j_plugin",
+  generates_api=True,
   deps = ["@derive4j//jar", "@derive4j_annotation//jar", "@derive4j_processor_api//jar", "@javapoet//jar"],
   processor_class = "org.derive4j.processor.DerivingProcessor")
 
