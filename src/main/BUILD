@@ -1,7 +1,8 @@
 java_plugin(
   name="dagger_compiler_plugin",
   generates_api=True,
-  deps = ["@dagger//jar", "@dagger_compiler//jar", "@dagger_producers//jar", "@javax_inject//jar", "@guava//jar"],
+  deps = ["@dagger//jar", "@dagger_compiler//jar", "@dagger_producers//jar", "@dagger_javapoet//jar", "@javax_inject//jar",
+          "@guava//jar", "@google_java_format//jar", "@errorprone_javac//jar"],
   processor_class = "dagger.internal.codegen.ComponentProcessor")
 
 java_plugin(
