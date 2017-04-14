@@ -23,9 +23,7 @@ public class GreetingModule {
     return new Greeter() {
       @Override
       public String greet(Greeting greeting) {
-
         System.out.println("Found greeting for: " + Greetings.getName(greeting));
-
         return formatter.apply(greeting);
       }
     };
