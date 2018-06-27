@@ -9,8 +9,9 @@ java_plugin(
   name = "dagger_compiler_plugin",
   generates_api = True,
   visibility = ["//visibility:public"],
-  deps = ["@dagger//jar", "@dagger_compiler//jar", "@dagger_producers//jar", "@dagger_javapoet//jar", "@javax_inject//jar",
-          "@guava//jar", "@google_java_format//jar", "@errorprone_javac//jar"],
+  deps = ["@dagger//jar", "@dagger_compiler//jar", "@dagger_producers//jar", "@dagger_spi//jar",
+          "@dagger_javapoet//jar", "@javax_inject//jar", "@guava//jar", "@google_java_format//jar",
+          "@errorprone_javac//jar"],
   processor_class = "dagger.internal.codegen.ComponentProcessor")
 
 # Annotation processor for Derive4j - ADT generator.

@@ -1,5 +1,2 @@
 # Created by .ignore support plugin (hsz.mobi)
-/bazel-testlogs
-/bazel-out
-/bazel-genfiles
-/bazel-bin
+/bazel-*

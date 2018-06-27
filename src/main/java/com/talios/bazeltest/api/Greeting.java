@@ -7,11 +7,8 @@ import org.derive4j.Flavour;
 public abstract class Greeting {
 
   public interface Cases<R> {
-
     R Casual(String name);
-
     R Professional(String name);
-
     R Military(String name, String rank);
   }
 

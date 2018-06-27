@@ -8,11 +8,14 @@ import com.talios.bazeltest.impl.DaggerGreetingComponent;
 import com.talios.bazeltest.impl.GreetingComponent;
 import javaslang.collection.List;
 import javaslang.control.Try;
+
+import java.io.IOException;
+
 import javax.lang.model.element.Modifier;
 
 public class Main {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
 
     Try<List<String>> vals = Try.of(() -> List.of(new String[] {"one", "two", "three"}));
 
@@ -43,10 +46,6 @@ public class Main {
 
     JavaFile javaFile = JavaFile.builder("com.example.helloworld", helloWorld).build();
 
-    Try.of(
-        () -> {
-          javaFile.writeTo(System.out);
-          return null;
-        });
+    javaFile.writeTo(System.out);
   }
 }
