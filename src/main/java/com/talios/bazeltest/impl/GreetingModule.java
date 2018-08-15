@@ -6,9 +6,12 @@ import com.talios.bazeltest.api.Greetings;
 import dagger.Module;
 import dagger.Provides;
 import java.util.function.Function;
+import com.google.common.flogger.FluentLogger;
 
 @Module
 public class GreetingModule {
+
+  private static final FluentLogger logger = FluentLogger.forEnclosingClass();
 
   @Provides
   Function<Greeting, String> provideGreetingFormatter() {
@@ -23,7 +26,7 @@ public class GreetingModule {
     return new Greeter() {
       @Override
       public String greet(Greeting greeting) {
-        System.out.println("Found greeting for: " + Greetings.getName(greeting));
+        logger.atInfo().log("Found greeting for: %s", Greetings.getName(greeting));
         return formatter.apply(greeting);
       }
     };

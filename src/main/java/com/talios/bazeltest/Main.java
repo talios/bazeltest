@@ -17,6 +17,8 @@ public class Main {
 
   public static void main(String[] args) throws IOException {
 
+    System.setProperty("java.util.logging.SimpleFormatter.format", "[%1$tc] %4$s %5$s %n");
+
     Try<List<String>> vals = Try.of(() -> List.of(new String[] {"one", "two", "three"}));
 
     vals.forEach(vargs -> System.out.println(vargs.get(1)));

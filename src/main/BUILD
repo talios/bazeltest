@@ -12,6 +12,7 @@ java_library(
     deps = [
       ":bazeltest_api",
       "@dagger//jar",
+      "@flogger//jar",
       "@javax_inject//jar"
     ],
 	visibility = ["//visibility:public"])
@@ -23,9 +24,11 @@ java_binary(
       ":bazeltest_api",
       ":bazeltest_impl",
       "@javaslang//jar",
+      "@flogger//jar",
       "@javapoet//jar"
     ],
     runtime_deps = [
-      "@dagger//jar"
+      "@dagger//jar",
+      "@flogger_system_backend//jar"
     ],
     main_class = "com.talios.bazeltest.Main")
