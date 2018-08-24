@@ -6,8 +6,8 @@ import com.squareup.javapoet.TypeSpec;
 import com.talios.bazeltest.api.Greetings;
 import com.talios.bazeltest.impl.DaggerGreetingComponent;
 import com.talios.bazeltest.impl.GreetingComponent;
-import javaslang.collection.List;
-import javaslang.control.Try;
+import io.vavr.collection.List;
+import io.vavr.control.Try;
 
 import java.io.IOException;
 

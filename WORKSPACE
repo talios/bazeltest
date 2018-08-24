@@ -15,9 +15,7 @@ maven_jar(name = "errorprone_javac",       artifact = "com.google.errorprone:jav
 # Application dependencies
 maven_jar(name = "guava",                  artifact = "com.google.guava:guava:26.0-jre")
 maven_jar(name = "javax_inject",           artifact = "javax.inject:javax.inject:1")
-maven_jar(name = "javaslang",              artifact = "io.javaslang:javaslang:2.1.0-alpha")
-maven_jar(name = "javaslang_pure",         artifact = "io.javaslang:javaslang-pure:2.1.0-alpha")
-maven_jar(name = "javaslang_match",        artifact = "io.javaslang:javaslang-match:2.1.0-alpha")
+maven_jar(name = "vavr",                   artifact = "io.vavr:vavr:0.9.2")
 maven_jar(name = "javapoet",               artifact = "com.squareup:javapoet:1.11.1")
 
 # Logging dependencies

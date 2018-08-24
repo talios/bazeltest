@@ -3,7 +3,7 @@ package com.talios.bazeltest.api;
 import org.derive4j.Data;
 import org.derive4j.Flavour;
 
-@Data(flavour = Flavour.Javaslang)
+@Data(flavour = Flavour.Vavr)
 public abstract class Greeting {
 
   public interface Cases<R> {

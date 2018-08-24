@@ -2,7 +2,7 @@ java_library(
     name = "bazeltest_api",
     srcs = glob(["java/com/talios/bazeltest/api/**/*.java"]),
     plugins = ["//:derive4j_plugin"],
-    deps = ["@derive4j_annotation//jar", "@javaslang//jar"],
+    deps = ["@derive4j_annotation//jar", "@vavr//jar"],
     visibility = ["//visibility:public"])
 
 java_library(
@@ -23,7 +23,7 @@ java_binary(
     deps = [
       ":bazeltest_api",
       ":bazeltest_impl",
-      "@javaslang//jar",
+      "@vavr//jar",
       "@flogger//jar",
       "@javapoet//jar"
     ],
