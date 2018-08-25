@@ -19,8 +19,8 @@ maven_jar(name = "vavr",                   artifact = "io.vavr:vavr:0.9.2")
 maven_jar(name = "javapoet",               artifact = "com.squareup:javapoet:1.11.1")
 
 # Logging dependencies
-maven_jar(name = "flogger",                artifact = "com.google.flogger:flogger:0.2")
-maven_jar(name = "flogger_system_backend", artifact = "com.google.flogger:flogger-system-backend:0.2")
+maven_jar(name = "flogger",                artifact = "com.google.flogger:flogger:0.3.1")
+maven_jar(name = "flogger_system_backend", artifact = "com.google.flogger:flogger-system-backend:0.3.1")
 
 # Test dependencies
 maven_jar(name = "junit",                  artifact = "junit:junit:4.12")
